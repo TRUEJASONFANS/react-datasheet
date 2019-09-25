@@ -9,7 +9,7 @@ export default class Cell extends PureComponent {
   render () {
     const {
           cell, row, col, attributesRenderer,
-          className, style, onMouseDown, onMouseOver, onDoubleClick, onContextMenu
+          className, style, onMouseDown, onMouseOver, onClick, onDoubleClick, onContextMenu
         } = this.props
 
     const {colSpan, rowSpan} = cell
@@ -20,6 +20,7 @@ export default class Cell extends PureComponent {
         className={className}
         onMouseDown={onMouseDown}
         onMouseOver={onMouseOver}
+        onClick={onClick}
         onDoubleClick={onDoubleClick}
         onTouchEnd={onDoubleClick}
         onContextMenu={onContextMenu}
